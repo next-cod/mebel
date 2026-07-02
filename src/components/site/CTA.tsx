@@ -21,9 +21,7 @@ export const CTA = () => {
       <div className="container-hw">
         <div className="grid gap-16 lg:grid-cols-12">
           <AnimateIn className="lg:col-span-6">
-            <span className="eyebrow">Связаться</span>
-            <div className="section-divider mt-6" />
-            <h2 className="serif mt-8 text-3xl leading-[1.1] text-primary sm:text-4xl lg:text-5xl">
+            <h2 className="serif text-3xl leading-[1.1] text-primary sm:text-4xl lg:text-5xl">
               Подберите мебель<br /> под ваш интерьер
             </h2>
             <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">

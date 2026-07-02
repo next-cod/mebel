@@ -61,6 +61,27 @@
 
   html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--wood)) hsl(var(--surface));
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--surface));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--wood));
+    border: 3px solid hsl(var(--surface));
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--wood-deep));
+  }
+  ::-webkit-scrollbar-corner {
+    background: hsl(var(--surface));
   }
 
   body {

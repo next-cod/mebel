@@ -1,46 +1,48 @@
 import heroImg from "@/src/assets/hero-living.jpg";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { AnimateIn } from "@/src/components/ui/AnimateIn";
+
+const stats = [
+  { k: "28", v: "лет мастерства" },
+  { k: "1200+", v: "интерьеров" },
+  { k: "10", v: "лет гарантии" },
+];
 
 export const Hero = () => (
   <section className="relative overflow-hidden bg-background lg:min-h-[calc(100vh-88px)] lg:flex lg:items-center">
-    <div className="container-hw grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:gap-10 lg:py-12">
+    <div className="container-hw grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:gap-12 lg:py-12">
       <div className="lg:col-span-5 flex flex-col justify-center">
         <AnimateIn delay={0}>
-          <span className="eyebrow">Мебельная студия – с 1998 года</span>
-          <div className="section-divider mt-5" />
+          <span className="text-xs uppercase tracking-[0.08em] text-accent">
+            Мебельная студия – с 1998 года
+          </span>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h1 className="serif mt-6 text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
+          <h1 className="serif mt-7 text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
             Мебель,<br /> которая создаёт<br /> характер дома
           </h1>
         </AnimateIn>
         <AnimateIn delay={0.2}>
-          <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
+          <p className="mt-7 max-w-md text-base leading-relaxed text-muted-foreground">
             Heritage Wood – деревянная мебель для интерьеров, где важны качество, форма и долговечность.
           </p>
         </AnimateIn>
         <AnimateIn delay={0.3}>
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link href="/collections" className="btn-primary">Смотреть коллекцию</Link>
-            <Link href="/about" className="btn-ghost">О компании</Link>
+            <Link
+              href="/about"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-primary"
+            >
+              О компании
+              <ArrowRight
+                size={16}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
           </div>
-        </AnimateIn>
-
-        <AnimateIn delay={0.4}>
-          <dl className="mt-10 grid grid-cols-3 gap-8 border-t border-border pt-6">
-            {[
-              { k: "27", v: "лет мастерства" },
-              { k: "1200+", v: "интерьеров" },
-              { k: "10", v: "лет гарантии" },
-            ].map((s) => (
-              <div key={s.v}>
-                <dt className="serif text-3xl text-primary">{s.k}</dt>
-                <dd className="label mt-2">{s.v}</dd>
-              </div>
-            ))}
-          </dl>
         </AnimateIn>
       </div>
 
@@ -54,13 +56,21 @@ export const Hero = () => (
             priority
             placeholder="blur"
           />
-          <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-cream">
-            <div className="bg-primary/80 px-5 py-3 backdrop-blur-sm">
-              <div className="text-xs text-primary-foreground/70">
-                Коллекция
-              </div>
-              <div className="serif text-xl text-primary-foreground">Saint Germain</div>
-            </div>
+
+          <div className="absolute left-5 top-5 bg-primary/80 px-4 py-2.5 backdrop-blur-sm sm:left-6 sm:top-6">
+            <div className="text-[11px] text-primary-foreground/70">Коллекция</div>
+            <div className="serif text-lg text-primary-foreground sm:text-xl">Saint Germain</div>
+          </div>
+
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-primary/95 via-primary/60 to-transparent px-5 pb-6 pt-20 sm:px-8 sm:pb-8">
+            <dl className="grid grid-cols-3 gap-4">
+              {stats.map((s) => (
+                <div key={s.v}>
+                  <dt className="serif text-2xl leading-none text-cream sm:text-3xl">{s.k}</dt>
+                  <dd className="mt-2 text-[11px] leading-tight text-cream/70">{s.v}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
       </div>

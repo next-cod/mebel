@@ -12,10 +12,8 @@ export const Process = () => (
     <div className="container-hw">
       <AnimateIn>
         <div className="max-w-2xl">
-          <span className="eyebrow">Процесс работы</span>
-          <div className="section-divider mt-6" />
-          <h2 className="serif mt-8 text-3xl text-primary sm:text-4xl lg:text-5xl">
-            От первого разговора до готового интерьера
+          <h2 className="serif text-3xl text-primary sm:text-4xl lg:text-5xl">
+            Процесс работы
           </h2>
         </div>
       </AnimateIn>

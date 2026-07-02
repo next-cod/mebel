@@ -29,11 +29,7 @@ export const WhyUs = () => (
     <div className="container-hw">
       <AnimateIn>
         <div className="max-w-2xl">
-          <span className="text-sm font-medium text-brass">
-            Почему выбирают нас
-          </span>
-          <div className="mt-6 h-px w-14 bg-brass" />
-          <h2 className="serif mt-8 text-3xl sm:text-4xl lg:text-5xl">
+          <h2 className="serif text-3xl sm:text-4xl lg:text-5xl">
             Качество, в котором уверены поколения
           </h2>
         </div>
