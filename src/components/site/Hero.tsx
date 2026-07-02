@@ -19,8 +19,8 @@ export const Hero = () => (
           </span>
         </AnimateIn>
         <AnimateIn delay={0.1}>
-          <h1 className="serif mt-7 text-4xl leading-[1.05] text-primary sm:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
-            Мебель,<br /> которая создаёт<br /> характер дома
+          <h1 className="serif mt-7 text-5xl leading-[1.03] text-primary sm:text-[3.25rem] lg:text-[3.5rem] xl:text-[4rem]">
+            Мебель<br /> с премиум<br /> характером
           </h1>
         </AnimateIn>
         <AnimateIn delay={0.2}>
