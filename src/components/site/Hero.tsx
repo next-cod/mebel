@@ -1,7 +1,6 @@
 import heroImg from "@/src/assets/hero-living.jpg";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { AnimateIn } from "@/src/components/ui/AnimateIn";
 
 const stats = [
@@ -30,17 +29,13 @@ export const Hero = () => (
           </p>
         </AnimateIn>
         <AnimateIn delay={0.3}>
-          <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-3">
             <Link href="/collections" className="btn-primary">Смотреть коллекцию</Link>
             <Link
               href="/about"
-              className="group inline-flex items-center gap-2 text-sm font-medium text-primary"
+              className="text-sm font-medium text-primary underline-offset-4 transition-colors hover:underline"
             >
               О компании
-              <ArrowRight
-                size={16}
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              />
             </Link>
           </div>
         </AnimateIn>
